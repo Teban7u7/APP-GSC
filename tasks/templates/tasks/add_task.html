@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Tarea - Task Manager</title>
+    <!-- Cargar la fuente Montserrat y el archivo CSS si es necesario -->
+</head>
+<body>
+    <div class="container">
+        <h1>Agregar Tarea</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Guardar Tarea</button>
+        </form>
+    </div>
+</body>
+</html>
